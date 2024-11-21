@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        overflow: hidden;
+      }
+
+      .webgl {
+        position: fixed;
+        top: 0;
+        left: 0;
+        outline: none;
+      }
+
+      .overlay {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        padding: 20px;
+        pointer-events: none;
+
+        a {
+          pointer-events: all;
+        }
+      }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+
+  <body>
+    <canvas class="webgl"></canvas>
+    <div class="overlay">
+      <h1>REALISTIC RENDER:</h1>
+      <h1>SEA TURTLE</h1>
+      <p>Experience by <a style="color: #ee6c34" target="_blank" href="https://github.com/SahilK-027">SahilK-027</a></p>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+
+</html>
