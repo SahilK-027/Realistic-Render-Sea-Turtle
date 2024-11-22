@@ -44,8 +44,8 @@ class RealisticRender {
     this.scene.environmentIntensity = 1;
     this.scene.backgroundBlurriness = 0;
     this.scene.backgroundIntensity = 1;
-    this.scene.backgroundRotation.y = 3.74;
-    this.scene.environmentRotation.y = 3.74;
+    this.scene.backgroundRotation.y = 5;
+    this.scene.environmentRotation.y = 5;
   }
 
   loadEnvironment() {
@@ -125,7 +125,7 @@ class RealisticRender {
     this.ground = new THREE.Mesh(groundGeometry, groundMaterial);
     this.ground.receiveShadow = true;
     this.ground.rotation.x = -Math.PI / 2;
-    this.ground.position.y = boundingBox.min.y - 0.01;
+    this.ground.position.y = boundingBox.min.y - 0.05;
 
     this.scene.add(this.ground);
   }
@@ -137,13 +137,12 @@ class RealisticRender {
       0.1,
       100
     );
-    this.camera.position.set(-5, 5, 3);
+    this.camera.position.set(-0.5, 0.75, 3);
     this.scene.add(this.camera);
   }
 
   setupControls() {
     this.controls = new OrbitControls(this.camera, this.canvas);
-    this.controls.target.y = 3.5;
     this.controls.enableDamping = true;
   }
 
